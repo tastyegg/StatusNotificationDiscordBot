@@ -19,8 +19,9 @@ client.on('ready', () => {
 	deletePreviousMessages(channel, function() {
 		var readyEmbed = new Discord.RichEmbed()
 		.setTitle("Minecraft Server is READY")
-		.setDescription('\'!cmd\' will prompt the server to open.')
-		.setColor(0xF4B942);
+		.setDescription('Clicking the link or typing \'!cmd\' will prompt the server to open.')
+		.setColor(0xF4B942)
+		.setURL("https://tastyegg.github.io/StatusNotificationDiscordBot/");
 		
 		channel.send(readyEmbed);
 	});
@@ -62,7 +63,7 @@ client.on('message', msg => {
 				topic: 'Connect to ' + externalIp
 			});
 		});
-		channel.send('@everyone Server is now ON', {tts: true}).then(function(onMessage) {
+		channel.send('Server is now ON', {tts: true}).then(function(onMessage) {
 			deletePreviousMessages(channel, function() {
 				
 				// Draw Embed Message
