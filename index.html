@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<script type="text/javascript"
+			src="https://code.jquery.com/jquery-3.2.1.min.js"
+			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			crossorigin="anonymous"></script>
+		
+		<script type="text/javascript">
+			var fetch_url = "https://discordapp.com/api/webhooks/362802075911979010/IGJU-GjAw9P4JLfbE0aJdOat44rcDE2qiS_lEsfzQ9HnG1bcDtRsunMm5M7XNrkA6Q2J";
+		
+			var hook_data = new Object();
+			hook_data.username = "House Bot";
+			hook_data.content = "!cmd";
+			var jsonString = JSON.stringify(hook_data);
+				
+			$.post(fetch_url, jsonString, function(data) {
+				window.history.back();
+				window.close();
+			});
+		</script>
+	</head>
+	<body>
+		Discord Command Sent
+	</body>
+</html>
